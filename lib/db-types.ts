@@ -23,6 +23,27 @@ export type CompaniesRow = {
   createdAt: string
 }
 
+export type CompanyInvitationsRow = {
+  id: string
+  companyId: string
+  email: string | null
+  invitationCode: string
+  role: string
+  status: string
+  expiresAt: string
+  createdAt: string
+  invitedBy: string
+}
+
+export type CompanyMembersRow = {
+  id: string
+  companyId: string
+  userId: string
+  role: string
+  status: string
+  createdAt: string
+}
+
 export type ComplaintsRow = {
   id: string
   userId: string
@@ -54,4 +75,19 @@ export type UserProfilesRow = {
   displayName: string | null
   phone: string | null
   createdAt: string
+}
+
+export type UsersRow = {
+  id: string
+  email: string
+  emailVerified: number | string | null
+  displayName: string | null
+  avatarUrl: string | null
+  phone: string | null
+  phoneVerified: number | string | null
+  role: string | null
+  metadata: string | null
+  createdAt: string
+  updatedAt: string
+  lastSignIn: string
 }
